@@ -1,0 +1,94 @@
+<div class="app-shell" [class.crt-overlay]="isCrtEnabled()">
+  <!-- Top: NgRx Time-Travel Micro-Scrubber -->
+  <app-timeline-scrubber></app-timeline-scrubber>
+
+  <!-- Middle: EarthBound Animated Psychedelic Arena & Enemies -->
+  <app-battle-arena></app-battle-arena>
+
+  <!-- Bottom: 4 EarthBound Character Cards & Command Wheel -->
+  <app-character-cards></app-character-cards>
+
+  <!-- Footer Quick Bar & Interview Architecture Showcase -->
+  <footer class="app-footer">
+    <div class="footer-left">
+      <span class="badge-tag">ANGULAR 22</span>
+      <span class="badge-tag ngrx">NGRX STORE</span>
+      <span class="badge-tag crt" (click)="toggleCrt()">
+        CRT SCANLINES: {{ isCrtEnabled() ? 'ON' : 'OFF' }}
+      </span>
+    </div>
+
+    <div class="footer-center">
+      <span class="feature-tip">
+        💡 <strong>Interview Showcase:</strong> Scrub backward at any moment to turn back time. Entering a new action drops the previous future timeline!
+      </span>
+    </div>
+
+    <div class="footer-right">
+      <button class="arch-btn" (click)="toggleArchModal()">
+        📐 ARCHITECTURE SPECS
+      </button>
+    </div>
+  </footer>
+
+  <!-- Architecture Modal for Technical Interviews -->
+  @if (isArchModalOpen()) {
+    <div class="modal-backdrop" (click)="toggleArchModal()">
+      <div class="modal-dialog" (click)="$event.stopPropagation()">
+        <div class="modal-header">
+          <h2>⚡ ARCHITECTURAL SHOWCASE: ANGULAR 22 + NGRX</h2>
+          <button class="close-btn" (click)="toggleArchModal()">✕</button>
+        </div>
+
+        <div class="modal-body">
+          <section class="arch-section">
+            <h3>1. State-History Meta-Reducer (Pure Time-Travel)</h3>
+            <p>
+              Implemented as a higher-order NgRx <code>timeTravelMetaReducer</code> wrapping <code>battleReducer</code>.
+              Maintains an immutable tuple of <code>&#123; past: BattleState[], present: BattleState, future: BattleState[] &#125;</code>.
+              Whenever the user scrubs backward and branches with a fresh command, future timeline states are cleanly purged.
+            </p>
+          </section>
+
+          <section class="arch-section">
+            <h3>2. Micro-Scrubber Rewind Mechanics</h3>
+            <p>
+              Unlike simple input cancelation, the top timeline scrubber indexes every discrete combat resolution step,
+              damage calculation, and round phase shift. Users can scrub with the slider, click timeline nodes, or step back one action at a time.
+            </p>
+          </section>
+
+          <section class="arch-section">
+            <h3>3. EarthBound Visuals & Mechanical Rolling Meters</h3>
+            <p>
+              Features procedural animated canvas sine-wave hypnotic shaders, SVG pixel sprites, floating damage popups with
+              <strong>SMAAAASH!!</strong> criticals, and custom <code>RollingMeterComponent</code> mechanical HP/PP odometers.
+            </p>
+          </section>
+
+          <section class="arch-section">
+            <h3>4. Modern Final Fantasy Rules Engine</h3>
+            <ul>
+              <li><strong>Initiative:</strong> Speed stat with random variance calculation.</li>
+              <li><strong>Modern Retargeting:</strong> Dead targets automatically redirect strikes to living enemies.</li>
+              <li><strong>Status Interruption:</strong> Asleep or Paralyzed combatants forfeit their queued action.</li>
+              <li><strong>Fresh Roll:</strong> Rewinding allows new random damage rolls and critical hits.</li>
+            </ul>
+          </section>
+
+          <section class="arch-section">
+            <h3>5. Native Web Audio API Synthesizer</h3>
+            <p>
+              Zero external MP3/WAV dependencies! Uses browser oscillators to synthesize 8-bit sound effects:
+              menu beeps, SMAAAASH chimes, PSI whooshes, and an authentic tape-reverse time-rewind whoosh.
+            </p>
+          </section>
+        </div>
+
+        <div class="modal-footer">
+          <button class="ok-btn" (click)="toggleArchModal()">CLOSE</button>
+        </div>
+      </div>
+    </div>
+  }
+</div>

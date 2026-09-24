@@ -83,6 +83,24 @@
               menu beeps, SMAAAASH chimes, PSI whooshes, and an authentic tape-reverse time-rewind whoosh.
             </p>
           </section>
+
+          <section class="arch-section">
+            <h3>6. NgRx Architecture & Data Flow</h3>
+            <p>
+              Typed <code>createActionGroup</code> dispatches, wrapped by a higher-order tuple meta-reducer (<code>past</code> / <code>present</code> / <code>future</code>),
+              memoized selectors projected to Angular 22 Signals via <code>store.selectSignal</code>, and an asynchronous
+              <code>BattleEffects</code> orchestrator handling delay pacing and Web Audio side-effects. See <code>docs/NGRX_STRATEGY.md</code> for the full guide.
+            </p>
+          </section>
+
+          <section class="arch-section">
+            <h3>7. Testing Strategy (64 Tests, 11 Suites)</h3>
+            <p>
+              Vitest-powered test pyramid with 100% pass rate. Covers pure domain math formulas, higher-order meta-reducer
+              time-travel branching, atomic reducer state mutations, isolated selector projectors, mock action effects, and
+              component UI integration (including conditional commence button visibility). See <code>docs/TESTING_STRATEGY.md</code> for details.
+            </p>
+          </section>
         </div>
 
         <div class="modal-footer">

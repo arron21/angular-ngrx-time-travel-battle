@@ -4,6 +4,15 @@ An advanced **Angular 22** & **NgRx Store 22** turn-based battle engine built as
 
 ---
 
+## 📚 In-Depth Architectural Documentation
+
+Comprehensive technical documentation is provided in the [`docs/`](docs/) directory:
+
+* 📖 **[NgRx State Management Strategy (`docs/NGRX_STRATEGY.md`)](docs/NGRX_STRATEGY.md)**: Deep dive into the State-History Meta-Reducer tuple model (`past`/`present`/`future`), branching timeline paradox resolution, transient action filtering, memory bounding, typed action groups, memoized selectors with Angular 22 Signals integration, and async turn pacing with NgRx Effects.
+* 🧪 **[Testing Strategy & Architecture (`docs/TESTING_STRATEGY.md`)](docs/TESTING_STRATEGY.md)**: Breakdown of the test pyramid, Vitest setup, layer-by-layer testing patterns (pure domain math, reducer invariant assertions, isolated selector projector testing, mock action stream effects, and component integration tests).
+
+---
+
 ## 🌟 Key Technical Showcase Features
 
 ### 1. Pure State-History NgRx Meta-Reducer (`past`, `present`, `future`)

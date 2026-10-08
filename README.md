@@ -1,5 +1,10 @@
 # ⚡ EarthBound × Final Fantasy: NgRx 22 Time-Travel Battle Engine
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-2ecc71?style=for-the-badge&logo=github)](https://arron21.github.io/angular-ngrx-time-travel-battle/)
+[![Deploy Status](https://github.com/arron21/angular-ngrx-time-travel-battle/actions/workflows/deploy.yml/badge.svg)](https://github.com/arron21/angular-ngrx-time-travel-battle/actions/workflows/deploy.yml)
+
+🎮 **Live GitHub Pages URL**: **[https://arron21.github.io/angular-ngrx-time-travel-battle/](https://arron21.github.io/angular-ngrx-time-travel-battle/)**
+
 An advanced **Angular 22** & **NgRx Store 22** turn-based battle engine built as an interview showcase. It merges the tactical depth of traditional **Final Fantasy** combat with the retro visual aesthetic of **EarthBound** (procedural hypnotic canvas, mechanical rolling HP/PP odometers, SVG pixel sprites, Web Audio synthesizer) and a first-class **Micro-Scrubber Time-Travel System** powered by a pure **NgRx State-History Meta-Reducer**.
 
 ---
